@@ -1,0 +1,17 @@
+.header {
+	background-color: white;
+	margin: 0;
+	padding: 3px;
+	display: flex;
+	justify-content: space-between;
+}
+.header p {
+	font-size: 23px;
+}
+.header-right p {
+	font-size: 15px;
+}
+p {
+	margin: 0;
+	color: blue;
+}
