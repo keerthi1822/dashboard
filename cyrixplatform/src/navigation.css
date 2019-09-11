@@ -1,0 +1,13 @@
+.nav {
+	height: 100%;
+}
+.nav ul {
+	width: 100%;
+	list-style: none;
+	background-color: black;
+	color: white;
+}
+.nav ul li {
+	padding-top: 40%;
+	font-size: 50%;
+}

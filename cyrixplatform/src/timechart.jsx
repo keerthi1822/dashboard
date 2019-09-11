@@ -9,7 +9,8 @@ function TimeChart() {
 	const options = [
 		{
 			chart: {
-				type: "column"
+				width: 300,
+				height: 235
 			},
 			title: {
 				text: "Time Distibution"
@@ -48,18 +49,35 @@ function TimeChart() {
 			series: [
 				{
 					name: "Male",
-					data: [4, 7, 1, 1, 1, 1, 1, 1, 2, 1, 9, 5]
+					data: [4, 7, 1, 1, 1, 1, 1, 1, 2, 1, 9, 5],
+					type: "column"
 				},
 				{
 					name: "Female",
-					data: [8, 7, 9, 9, 1, 8, 1, 1, 9, 8, 1, 9]
+					data: [8, 7, 9, 9, 1, 8, 1, 1, 9, 8, 1, 9],
+					type: "column"
 				}
-			]
+			],
+			responsive: {
+				rules: {
+					condition: {
+						maxWidth: 500,
+						callback() {
+							return true;
+						}
+					},
+					chartOptions: {
+						legend: { enabled: false },
+						yAxis: { title: { text: "" } }
+					}
+				}
+			}
 		},
 
 		{
 			chart: {
-				type: "column"
+				width: 300,
+				height: 235
 			},
 			title: {
 				text: "Time"
@@ -99,17 +117,34 @@ function TimeChart() {
 			series: [
 				{
 					name: "Male",
-					data: [4, 7, 1, 5, 1, 4, 3, 2, 2, 1]
+					data: [4, 7, 1, 5, 1, 4, 3, 2, 2, 1],
+					type: "column"
 				},
 				{
 					name: "Female",
-					data: [6, 6, 5, 9, 0, 3, 4, 1, 3, 5]
+					data: [6, 6, 5, 9, 0, 3, 4, 1, 3, 5],
+					type: "column"
 				}
-			]
+			],
+			responsive: {
+				rules: {
+					condition: {
+						maxWidth: 500,
+						callback() {
+							return true;
+						}
+					},
+					chartOptions: {
+						legend: { enabled: false },
+						yAxis: { title: { text: "" } }
+					}
+				}
+			}
 		},
 		{
 			chart: {
-				type: "column"
+				width: 300,
+				height: 235
 			},
 			title: {
 				text: "Time"
@@ -142,27 +177,38 @@ function TimeChart() {
 			},
 			plotOptions: {
 				column: {
-					pointPadding: 0.2,
 					borderWidth: 0
 				}
 			},
 			series: [
 				{
 					name: "Male",
-					data: [4, 7, 1, 12, 1, 1, 3, 5, 2, 1]
+					data: [4, 7, 1, 12, 1, 1, 3, 5, 2, 1],
+					type: "column"
 				},
 				{
 					name: "Female",
-					data: [6, 8, 5, 9, 0, 4, 1, 3, 2, 5]
+					data: [6, 8, 5, 9, 0, 4, 1, 3, 2, 5],
+					type: "column"
 				}
-			]
+			],
+			responsive: {
+				rules: {
+					condition: {
+						maxWidth: 500,
+						callback() {
+							return true;
+						}
+					},
+					chartOptions: {
+						legend: { enabled: false },
+						yAxis: { title: { text: "" } }
+					}
+				}
+			}
 		}
 	];
 
-	/* let charts = options.map(chart => {
-		console.log(chart);
-		return chart;
-	}); */
 	let i = 1;
 	return (
 		<div className='time' key={i++}>

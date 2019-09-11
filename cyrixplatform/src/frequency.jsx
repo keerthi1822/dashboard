@@ -6,23 +6,36 @@ import HighchartsReact from "highcharts-react-official";
 /* const ReactHighcharts = require("react-highcharts"); */
 
 function Frequency() {
+	/* 	const componentStyle = {
+		margin: "4px",
+		position: "absolute",
+		minWidth: "50%"
+	}; */
+
 	const options = {
 		chart: {
-			type: "pie"
+			type: "pie",
+			margin: [0, 0, 0, 15],
+			spacingTop: 0,
+			spacingBottom: 0,
+			spacingLeft: 0,
+			spacingRight: 0,
+
+			// Explicitly tell the width and height of a chart
+			width: 300,
+			height: 200
 		},
 		title: {
 			text: "Frequency Distribution"
-		},
-		subtitle: {
-			text: "Frequency"
 		},
 		credits: {
 			enabled: false
 		},
 		plotOptions: {
 			pie: {
-				innerSize: 130,
-				depth: 45
+				size: "50%",
+				innerSize: "80%",
+				depth: "90%"
 			}
 		},
 		series: [

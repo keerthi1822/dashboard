@@ -1,13 +1,23 @@
-/* *,
+*,
 *::before,
 *::after {
 	box-sizing: border-box;
-} */
-.fullpage {
-	width: 100%;
+}
+* {
+	padding: 0;
 	margin: 0;
 }
-.main {
+.container {
+	max-width: 200%;
+	margin: 0;
+	padding: 0;
+}
+/* .viewsize {
+	width: 100%;
+} */
+.main,
+p {
+	flex-wrap: wrap;
 	width: 100%;
 	flex: 1 1 0;
 }
@@ -19,15 +29,21 @@
 .flex {
 	display: flex;
 }
+
 .gf,
 .ac,
 .gfaca {
 	flex-direction: column;
-	flex: 1 1 0;
+	flex-wrap: wrap;
+	margin: 2px;
 }
 .gfandac {
-	flex: 1 1 0;
+	/* 	flex: 1 1 0; */
+	flex-wrap: wrap;
 }
+/* .size {
+	width: 100%;
+} */
 
 /*.ac {
 	flex-grow: 1;

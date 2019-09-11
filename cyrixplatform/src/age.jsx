@@ -6,7 +6,8 @@ import HighchartsReact from "highcharts-react-official";
 function Age() {
 	const options = {
 		chart: {
-			type: "column"
+			width: 600,
+			height: 300
 		},
 		title: {
 			text: "Age distribution"
@@ -49,6 +50,9 @@ function Age() {
 			useHTML: true
 		},
 		plotOptions: {
+			series: {
+				groupPadding: 0
+			},
 			column: {
 				pointPadding: 0.2,
 				borderWidth: 0
@@ -56,14 +60,25 @@ function Age() {
 		},
 		series: [
 			{
-				name: "Male",
-				data: [4, 7, 1, 7, 3, 8, 1, 5, 2, 1, 9, 5, 1, 2, 0]
-			} /* ,
-			{
-				name: "Female",
-				data: [8, 7, 9, 9, 1, 8, 1, 1, 9, 8, 1, 9, 2, 1, 1]
-			} */
-		]
+				name: "age",
+				data: [4, 7, 1, 7, 3, 8, 1, 5, 2, 1, 9, 5, 1, 2, 0],
+				type: "column"
+			}
+		],
+		responsive: {
+			rules: {
+				condition: {
+					maxWidth: 500,
+					callback() {
+						return true;
+					}
+				},
+				chartOptions: {
+					legend: { enabled: false },
+					yAxis: { title: { text: "" } }
+				}
+			}
+		}
 	};
 
 	return (
